@@ -8,15 +8,6 @@ let colorInput = document.getElementById("colorInput");
 let schemeTypeInput = document.getElementById("color-scheme-type");
 let colorArea = document.getElementById("color-container");
 
-function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  }
-
 function addData(data) {
     console.log(data);
     colorArea.innerHTML = data.colors.map((color)=>{
@@ -36,7 +27,6 @@ function addData(data) {
     ).join("")
 }
 
-
   function handleColorSchemeSubmit() {
     let hexValue = colorInput.value.slice(1)
     let selectedValue = schemeTypeInput.value;
@@ -49,9 +39,6 @@ function addData(data) {
 
   }
 
-
-fetch('');
-
 function main(){
     colorForm.addEventListener('submit', (e)=>{
         e.preventDefault();
@@ -62,5 +49,4 @@ function main(){
 
 
 main()
-//scheme?hex=00000&mode=monochrome&count=5
-//scheme?hex=24B1E0&mode=triad&count=6
+
