@@ -40,7 +40,7 @@ function addData(data) {
   function handleColorSchemeSubmit() {
     let hexValue = colorInput.value.slice(1)
     let selectedValue = schemeTypeInput.value;
-    let fullUrl = baseUrl + schemeEp + `?hex=${hexValue}&mode=${selectedValue}&count=5`//`https://www.thecolorapi.com/scheme?hex=${hexValue}&mode=${selectedValue}&count=5`
+    let fullUrl = baseUrl + schemeEp + `?hex=${hexValue}&mode=${selectedValue}&count=5`
 
 
     fetch(fullUrl).then(response=>response.json()).then((data)=>{
